@@ -145,6 +145,14 @@ def nextpag1():
             res.place(x=260, y=200)
             res.configure(bg='black',fg='red')
             res.configure(font="-family {Segoe UI} -size 21 -weight bold")
+            def reset():
+                res.destroy()
+                bt_res.destroy()
+            bt_res=tk.Button(root2,text="CLEAR",command=reset)
+            bt_res.place(x=290,y=345)
+            bt_res.configure(bg="red", fg="black",
+                             activebackground="black", activeforeground="red")
+            bt_res.configure(relief="flat")
        except:
             print('attention website or host not existing :(')
        # label res

@@ -24,7 +24,7 @@ root.configure(background="#000000")
 
 # frame setting
 Frame1 = Frame(root)
-Frame1.place(relx=0.068, rely=0.044, relheight=0.744
+Frame1.place(relx=0.045, rely=0.044, relheight=0.744
                                       , relwidth=0.899)
 Frame1.configure(relief='groove')
 Frame1.configure(borderwidth="3")
@@ -118,7 +118,7 @@ def nextpag1():
     root2.maxsize(1444, 881)
     root2.resizable(False,False)
     root2.title("web_ip")
-    root2.configure(background="#000000")
+    root2.configure(background="black")
     
     # text box
     textbox1 = tk.Entry(root2, bg='white', fg='black',borderwidth='1')
@@ -150,6 +150,9 @@ def nextpag1():
                 bt_res.destroy()
             bt_res=tk.Button(root2,text="CLEAR",command=reset)
             bt_res.place(x=290,y=345)
+            bt_res.configure(bg="red", fg="black",
+                             activebackground="black", activeforeground="red")
+            bt_res.configure(relief="flat")
        except:
             print(' website or host not existing :(')
        # label res
@@ -165,7 +168,10 @@ def nextpag1():
     if __name__=="__main__":
             root2.mainloop()
 
-    
+def set1():
+        import tkinter as tk 
+        root4=tk.Tk()
+        root4.geometry('300x300')
 
 #------------------------------------------------------------------------
     #button root
@@ -173,7 +179,8 @@ def nextpag1():
 bt_next = Button(root,text='web_ip',command=nextpag1,bg='red',fg='black',activebackground='black',activeforeground='red',relief='flat',borderwidth='2')
 bt_next.place(relx=0.100, rely=0.822, height=44, width=217)
 
-bt_ifo = Button(root,text='INFO',command=info1,bg='red',fg='black',activebackground='black',activeforeground='red',relief='flat',borderwidth='2').place(relx=0.538, rely=0.822, height=44, width=217)
-
+bt_ifo = Button(root,text='INFO',command=info1,bg='red',fg='black',activebackground='black',activeforeground='red',relief='flat',borderwidth='2').place(relx=0.638, rely=0.822, height=44, width=217)
+bt_set = Button(root,state=DISABLED,text="SET",command=set1,bg='red',fg='black',activeforeground='red',activebackground='black',relief='flat',borderwidth='2')
+bt_set.place(relx=0.638, rely=0.02, height=44, width=55)
 if __name__=='__main__':
      root.mainloop()
