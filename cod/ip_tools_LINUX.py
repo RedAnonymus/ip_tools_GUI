@@ -24,8 +24,8 @@ root.configure(background="#000000")
 
 # frame setting
 Frame1 = Frame(root)
-Frame1.place(relx=0.045, rely=0.044, relheight=0.744
-                                      , relwidth=0.899)
+Frame1.place(relx=0.089, rely=0.044, relheight=0.724
+                                      , relwidth=0.839)
 Frame1.configure(relief='groove')
 Frame1.configure(borderwidth="3")
 Frame1.configure(relief="groove")
